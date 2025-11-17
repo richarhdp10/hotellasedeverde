@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva - Hotel Paraíso Azul</title>
+    <style>
+        body {
+            background-color: #f1f8e9;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            border: 2px solid #2196f3;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+            color: #0d47a1;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haga su reserva</h1>
+
+    <form action="procesoreserva.php" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="100" required autofocus>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" maxlength="10" required placeholder="DNI con letra">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de su estancia</legend>
+
+            <p>Tipo de habitación:</p>
+            <label><input type="radio" name="habitacion" value="Individual"> Individual</label>
+            <label><input type="radio" name="habitacion" value="Doble"> Doble</label>
+            <label><input type="radio" name="habitacion" value="Triple"> Triple</label>
+
+            <label for="personas">Número de personas:</label>
+            <select id="personas" name="personas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label><input type="checkbox" name="mascotas"> Llevo mascotas</label>
+
+            <label for="fecha">Fecha de llegada:</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="hora">Hora de llegada:</label>
+            <input type="time" id="hora" name="hora">
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>
+    </form>
+
+    <br>
+    <a href="hotelbuenavista.html">Volver</a>
+</body>
+</html>
